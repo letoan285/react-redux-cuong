@@ -18,6 +18,10 @@ class Menu extends Component {
               <li className="nav-item">
                 <Link className="nav-link " to="/products/add" >Add New</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/categories">Category List</Link>
+              </li>
+
             </ul>
           </div>
         </nav>

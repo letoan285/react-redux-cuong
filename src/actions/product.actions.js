@@ -17,3 +17,18 @@ export const loadProducts = (products) => {
         payload: products
     }
 }
+
+export const loadProductApi = (id) => {
+    return dispatch => {
+        return Axios.get(`http://localhost:3030/api/products/${id}`).then(res => {
+            dispatch(loadProduct(res.data))
+        })
+    }
+}
+
+export const loadProduct = (product) => {
+    return {
+        type: LOAD_PRODUCT,
+        payload: product
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {loadProductsApi} from '../../actions/product.actions';
 
 class ProductList extends Component {
@@ -12,7 +13,7 @@ class ProductList extends Component {
       return (
         <tr key={product.id}>
           <td>{ index+1 }</td>
-          <td>{ product.name }</td>
+          <td><Link to={`/products/detail/${product.id}`}> { product.name } </Link> </td>
           <td>{ product.description }</td>
           <td>{ product.price }</td>
           <td>{ product.status === 1 ? 'Active' : 'Inactive' }</td>
@@ -43,7 +44,7 @@ class ProductList extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state.products
+    products: state.productReducer.products
   }
 }
 const mapDispatchToProps = (dispatch) => {

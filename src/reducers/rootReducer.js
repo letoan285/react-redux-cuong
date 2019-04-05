@@ -1,19 +1,11 @@
-import * as types from '../constants/actionTypes';
+import { combineReducers } from 'redux';
 
-const initialState = {
-    products: []
-};
+import productReducer from './product.reducers';
+import categoryReducer from './category.reducers';
 
-const rootReducer = (state = initialState, action)  => {
-    switch(action.type) {
-        case types.LOAD_PRODUCTS: {
-            return {
-                ...state,
-                products: action.payload
-            }
-        }
-    }
-    return state;
-}
+const rootReducer = combineReducers({
+    productReducer,
+    categoryReducer
+});
 
 export default rootReducer;
