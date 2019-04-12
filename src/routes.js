@@ -2,6 +2,7 @@ import React from 'react';
 import HomePage from './containers/home/HomePage';
 import ProductList from './containers/products/ProductList';
 import NotFound from './components/NotFound';
+import ProductDetail from './containers/products/ProductDetail';
 
 
 
@@ -9,18 +10,18 @@ const routes = [
     {
         path: '/',
         exact: true,
-        main: () => <HomePage />
+        component: HomePage
     },
     {
         path: '/products',
         exact: true,
-        main: () => <ProductList />
+        component: ProductList
     },
     {
-        path: '',
+        path: '/products/detail/:id',
         exact: true,
-        main: () => <NotFound />
-    }
+        component: ProductDetail
+    },
 ];
 
 export default routes;

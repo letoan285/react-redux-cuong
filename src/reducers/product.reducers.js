@@ -1,4 +1,7 @@
 import * as types from '../constants/actionTypes';
+import { connect } from 'http2';
+import { all } from 'q';
+import { Agent } from 'https';
 
 const initialState = {
     products: [],

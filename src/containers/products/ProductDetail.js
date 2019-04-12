@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect} from 'react-redux';
-import { loadProductApi } from '../../actions/product.actions';
+import { loadProductApi } from '../../effects/product.effects';
 class ProductDetail extends Component {
     componentDidMount() {
         const {id} = this.props.match.params;

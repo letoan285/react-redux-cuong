@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { loadCategoriesApi } from '../../actions/category.actions';
+import { loadCategoriesApi } from '../../effects/category.effects';
 import { connect } from 'react-redux';
 class CategoryList extends Component {
-    componentDidMount() {
+  componentDidMount() {
         this.props.getAllCategories();
-    }
+  }
   render() {
     return (
       <div className="CategoryList">

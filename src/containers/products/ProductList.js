@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {loadProductsApi} from '../../actions/product.actions';
+import {loadProductsApi} from '../../effects/product.effects';
 
 class ProductList extends Component {
   componentDidMount() {
